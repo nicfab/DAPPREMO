@@ -1,8 +1,8 @@
 # DAPPREMO
 
-<center>
+<p align="center">
 <img src="https://dappremo.eu/images/dappremo.png#center" width=60% heigh=60%>
-</center>
+</p>
 
 <br>
 <br>
