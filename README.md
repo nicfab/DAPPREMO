@@ -1,11 +1,15 @@
 # DAPPREMO
 
-<center>
-<img src="https://dappremo.eu/images/dappremo.png#center" width=60% heigh=60%>
-</center>
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/24752671/215256785-1aafa8bc-c049-4de1-8682-f2a747fc8ee2.png" width=60% heigh=60%>
+
+</p>
 
 <br>
 <br>
+
+
 
 This is the official repository of the project **DAPPREMO (Data Protection and Privacy Relationships Model)**.
 
