@@ -1,5 +1,12 @@
 # DAPPREMO
 
+<center>
+<img src="https://dappremo.eu/images/dappremo.png#center" width=60% heigh=60%>
+</center>
+
+<br>
+<br>
+
 This is the official repository of the project **DAPPREMO (Data Protection and Privacy Relationships Model)**.
 
 DAPPREMO is the Data Protection and Privacy Relationships Model created by [**Nicola Fabiano**](https://www.fabiano.law/en/page/about/) aka [**nicfab**](https://notes.nicfab.it/en/pages/about/) in 2020.
