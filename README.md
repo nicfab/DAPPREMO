@@ -40,13 +40,13 @@ relation types, explicit assumptions — as distinct from the discursive form of
 the publications.
 
 - [`spec/`](spec/) — the specification
+- [`figures/`](figures/) — figures referenced by the specification
 - [`PUBLICATIONS.md`](PUBLICATIONS.md) — publication history and rights regime
   of each source
 - [`NOTICE.md`](NOTICE.md) — scope of the licence, trade mark notice
 
-Status: **specification in preparation** for the first release. Until `v1.0.0`
-is published, the authoritative description of the model remains the most
-recent publication.
+Current version: **1.0.0** — see [`CHANGELOG.md`](CHANGELOG.md) for the
+versioning policy and the record of changes.
 
 ## Research directions
 
@@ -92,5 +92,5 @@ the licence.
 ## Citing
 
 Please cite the publication indicated under `preferred-citation` in
-[`CITATION.cff`](CITATION.cff). A citable DOI for this repository will be added
-once `v1.0.0` is released.
+[`CITATION.cff`](CITATION.cff). A DOI for this repository is recorded there once
+a release has been archived.

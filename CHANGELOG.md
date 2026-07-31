@@ -32,7 +32,9 @@ a PATCH: it introduces no change to the model.
 Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 and are written in English.
 
-## [Unreleased]
+## [1.0.0] - 2026-07-31
+
+First public release of the DAPPREMO specification.
 
 ### Added
 
@@ -47,6 +49,10 @@ and are written in English.
   No 018706610), excluded material.
 - `CITATION.cff`: citation metadata with ORCID and `preferred-citation` to the
   2024 Springer chapter.
+- `CHANGELOG.md` and `CONTRIBUTING.md`: versioning policy and contribution
+  terms.
+- `figures/`: five figures redrawn as original vector work, referenced by the
+  specification.
 
 ### Changed
 
@@ -56,4 +62,4 @@ and are written in English.
   mark, which the licence does not affect.
 - `README.md` rewritten to describe the repository's actual contents.
 
-[Unreleased]: https://codeberg.org/nicfab/DAPPREMO/commits/branch/main
+[1.0.0]: https://codeberg.org/nicfab/DAPPREMO/releases/tag/v1.0.0

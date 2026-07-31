@@ -2,8 +2,8 @@
 
 **Data Protection and Privacy Relationships Model**
 
-Version: 1.0.0-draft
-Status: **Draft** — not yet released
+Version: 1.0.0
+Status: Released
 Author: Nicola Fabiano
 Licence: CC BY 4.0 (see [`../LICENSE`](../LICENSE) and [`../NOTICE.md`](../NOTICE.md))
 
