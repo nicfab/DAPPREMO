@@ -6,6 +6,9 @@
 
 **Data Protection and Privacy Relationships Model**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21723683.svg)](https://doi.org/10.5281/zenodo.21723683)
+[![Licence: CC BY 4.0](https://img.shields.io/badge/Licence-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+
 This is the official repository of **DAPPREMO**, a relational model for the
 personal data protection and privacy domains, based on set theory. DAPPREMO was
 created by [Nicola Fabiano](https://www.fabiano.law/en/page/about/) in 2020.
@@ -92,5 +95,9 @@ the licence.
 ## Citing
 
 Please cite the publication indicated under `preferred-citation` in
-[`CITATION.cff`](CITATION.cff). A DOI for this repository is recorded there once
-a release has been archived.
+[`CITATION.cff`](CITATION.cff).
+
+To cite this specification itself, use the concept DOI
+[10.5281/zenodo.21723683](https://doi.org/10.5281/zenodo.21723683), which always
+resolves to the latest version. Each release also carries its own DOI: version
+1.0.0 is [10.5281/zenodo.21723684](https://doi.org/10.5281/zenodo.21723684).

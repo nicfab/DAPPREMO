@@ -32,6 +32,16 @@ keywords:
 repository-code: "https://codeberg.org/nicfab/DAPPREMO"
 url: "https://www.dappremo.eu"
 license: CC-BY-4.0
+version: 1.0.0
+date-released: "2026-07-31"
+doi: "10.5281/zenodo.21723683"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21723683"
+    description: "Concept DOI — resolves to the latest version"
+  - type: doi
+    value: "10.5281/zenodo.21723684"
+    description: "DOI of version 1.0.0"
 preferred-citation:
   type: conference-paper
   title: >-
