@@ -42,13 +42,14 @@ The specification restates DAPPREMO in normative form — numbered definitions,
 relation types, explicit assumptions — as distinct from the discursive form of
 the publications.
 
-- [`spec/`](spec/) — the specification
+- [`spec/`](spec/) — the specification, in English (canonical) and Italian
 - [`figures/`](figures/) — figures referenced by the specification
 - [`PUBLICATIONS.md`](PUBLICATIONS.md) — publication history and rights regime
   of each source
+- [`references.bib`](references.bib) — the same publications in citable form
 - [`NOTICE.md`](NOTICE.md) — scope of the licence, trade mark notice
 
-Current version: **1.0.0** — see [`CHANGELOG.md`](CHANGELOG.md) for the
+Current version: **1.0.1** — see [`CHANGELOG.md`](CHANGELOG.md) for the
 versioning policy and the record of changes.
 
 ## Research directions

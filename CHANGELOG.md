@@ -32,6 +32,27 @@ a PATCH: it introduces no change to the model.
 Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 and are written in English.
 
+## [1.0.1] - 2026-07-31
+
+A patch release: nothing in the model changes.
+
+### Added
+
+- Italian translation of the specification (`spec/dappremo-spec.it.md`). The
+  English text remains canonical; where the two diverge, the English version
+  prevails.
+- `references.bib`: bibliography of the model in citable form.
+- `.zenodo.json`: archive metadata, so that the resource type, related works,
+  language and rights notice are set correctly at each release.
+
+### Changed
+
+- `PUBLICATIONS.md`: publication record completed with the 2022 ClioEdu
+  article, the 2023 *Revista de Ciencia de la Legislación* article (Italian
+  translation of the JSCI 2021 version), and both 2020 editions of the book;
+  this repository added with its Zenodo identifiers; note on translations.
+- `CITATION.cff` and `README.md`: Zenodo concept DOI and version DOI recorded.
+
 ## [1.0.0] - 2026-07-31
 
 First public release of the DAPPREMO specification.
@@ -62,4 +83,5 @@ First public release of the DAPPREMO specification.
   mark, which the licence does not affect.
 - `README.md` rewritten to describe the repository's actual contents.
 
+[1.0.1]: https://codeberg.org/nicfab/DAPPREMO/releases/tag/v1.0.1
 [1.0.0]: https://codeberg.org/nicfab/DAPPREMO/releases/tag/v1.0.0
