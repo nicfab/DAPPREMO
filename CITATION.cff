@@ -1,12 +1,13 @@
 cff-version: 1.2.0
 title: "DAPPREMO — Data Protection and Privacy Relationships Model"
 message: >-
-  If you use or refer to DAPPREMO, please cite the journal article indicated
-  under "preferred-citation".
+  If you use or refer to DAPPREMO, please cite the publication indicated under
+  "preferred-citation".
 type: dataset
 authors:
   - family-names: Fabiano
     given-names: Nicola
+    orcid: "https://orcid.org/0000-0002-8188-7656"
     affiliation: "Studio Legale Fabiano, Rome, Italy"
 abstract: >-
   DAPPREMO (Data Protection and Privacy Relationships Model) is a relational
@@ -16,8 +17,10 @@ abstract: >-
   domain is composed of legal rules together with non-homogeneous objects such
   as ethical principles, which belong to it by virtue of a shared characteristic
   property. The model describes the dynamic, multi-dimensional relations between
-  such domains and between the individual objects they contain. This repository
-  hosts the canonical, versioned specification of the model.
+  such domains and between the individual objects they contain, and supports the
+  identification of objects that are relevant to a case but habitually
+  overlooked. This repository hosts the canonical, versioned specification of
+  the model.
 keywords:
   - DAPPREMO
   - data protection
@@ -30,18 +33,36 @@ repository-code: "https://codeberg.org/nicfab/DAPPREMO"
 url: "https://www.dappremo.eu"
 license: CC-BY-4.0
 preferred-citation:
-  type: article
+  type: conference-paper
   title: >-
-    The approach with the Data Protection and Privacy Relationships Model
-    (DAPPREMO)
+    A Singular Approach to Address Privacy Issues by the Data Protection and
+    Privacy Relationships Model (DAPPREMO)
   authors:
     - family-names: Fabiano
       given-names: Nicola
-  journal: "Journal on Systemics, Cybernetics and Informatics"
-  volume: 19
-  issue: 7
-  start: 1
-  end: 19
-  year: 2021
-  issn: "1690-4524"
-  url: "https://www.iiisci.org/journal/sci/FullText.asp?var=&id=IP147LL21"
+      orcid: "https://orcid.org/0000-0002-8188-7656"
+  collection-title: "Privacy Technologies and Policy"
+  collection-type: proceedings
+  editors:
+    - family-names: Rannenberg
+      given-names: Kai
+    - family-names: Drogkaris
+      given-names: Prokopios
+    - family-names: Lauradoux
+      given-names: Cédric
+  conference:
+    name: "11th Annual Privacy Forum (APF 2023)"
+    city: Lyon
+    country: FR
+    date-start: "2023-06-01"
+    date-end: "2023-06-02"
+  volume: 13888
+  publisher:
+    name: "Springer"
+    city: Cham
+    country: CH
+  start: 166
+  end: 181
+  year: 2024
+  isbn: "978-3-031-61089-9"
+  doi: "10.1007/978-3-031-61089-9_8"
