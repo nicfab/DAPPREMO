@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="420" height="300" role="img" aria-label="Four domains S1 to S4 connected by relations, showing a one-to-many configuration">
+  <style>
+    :root { color-scheme: light dark; }
+    .st { fill: #1f2937; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .lbl { font-size: 14px; font-weight: 600; }
+    .el { font-size: 12px; }
+    .s1 { fill: #eef2f7; stroke: #3b5f8a; stroke-width: 1.4; }
+    .s2 { fill: #fdf0ee; stroke: #a4553f; stroke-width: 1.4; }
+    .s3 { fill: #f4f4f5; stroke: #4b5563; stroke-width: 1.4; }
+    .s4 { fill: #eef6ef; stroke: #4a7a52; stroke-width: 1.4; }
+    .cn { stroke: #6b8f70; stroke-width: 1.6; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .st { fill: #e5e7eb; }
+      .s1 { fill: #1c2836; stroke: #7ba3d0; }
+      .s2 { fill: #33241f; stroke: #d08b73; }
+      .s3 { fill: #26282c; stroke: #9ca3af; }
+      .s4 { fill: #1e2a20; stroke: #86bb8f; }
+      .cn { stroke: #86bb8f; }
+    }
+  </style>
+
+  <line class="cn" x1="152" y1="95" x2="238" y2="95"/>
+  <line class="cn" x1="120" y1="135" x2="160" y2="175"/>
+  <line class="cn" x1="262" y1="132" x2="228" y2="172"/>
+  <line class="cn" x1="300" y1="135" x2="322" y2="172"/>
+  <line class="cn" x1="240" y1="212" x2="290" y2="212"/>
+
+  <circle class="s1" cx="100" cy="88" r="55"/>
+  <circle class="s2" cx="290" cy="88" r="55"/>
+  <circle class="s3" cx="188" cy="212" r="55"/>
+  <circle class="s4" cx="345" cy="212" r="55"/>
+
+  <text class="st lbl" x="30" y="44">S₁</text>
+  <text class="st lbl" x="348" y="44">S₂</text>
+  <text class="st lbl" x="118" y="268">S₃</text>
+  <text class="st lbl" x="396" y="268">S₄</text>
+
+  <text class="st el" x="95" y="78">a</text>
+  <text class="st el" x="95" y="95">b</text>
+  <text class="st el" x="93" y="112">…</text>
+
+  <text class="st el" x="285" y="78">g</text>
+  <text class="st el" x="285" y="95">h</text>
+  <text class="st el" x="283" y="112">…</text>
+
+  <text class="st el" x="184" y="202">l</text>
+  <text class="st el" x="182" y="219">m</text>
+  <text class="st el" x="181" y="236">…</text>
+
+  <text class="st el" x="341" y="202">q</text>
+  <text class="st el" x="341" y="219">r</text>
+  <text class="st el" x="339" y="236">…</text>
+</svg>

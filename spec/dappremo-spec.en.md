@@ -185,6 +185,11 @@ set. An element of `A` that is related to no element of `B` is *unrelated* under
 `R`; such elements are admitted and are not a defect of the model. It also
 follows that a single element of `A` may be related to several elements of `B`.
 
+![Two sets A and B, with arrows showing the ordered pairs of a relation R](../figures/fig-01-relation.svg)
+
+*Figure 1 — A relation as a subset of the Cartesian product. Elements 2 and 4
+of A are related to nothing under R.*
+
 **R2 — Connection between domains.**
 Given a family of domains `(S₁, S₂, S₃, …, Sₙ)`, two of them are *connected*
 when some relation obtains between them:
@@ -195,6 +200,11 @@ A domain may be connected to several domains at once, in which case the
 configuration is *one-to-many*; where it is connected to a single domain, the
 configuration is *one-to-one*.
 
+![Four domains connected by relations, in a one-to-many configuration](../figures/fig-02-connected-domains.svg)
+
+*Figure 2 — Connections within a family of domains. S₁ is connected to both S₂
+and S₃, a one-to-many configuration.*
+
 **R3 — Strong inclusion.**
 Where every object of a domain `A` is also an object of the reference set `B`:
 
@@ -204,6 +214,10 @@ Strong inclusion asserts that all rules of the area described by `A` are also
 privacy rules or ethical principles. This is a demanding claim and will rarely
 hold. R3 is stated because it is the limiting case, not because it is the
 expected one; where a scenario does not satisfy it, R4 is to be used instead.
+
+![Set A entirely contained within set B](../figures/fig-03-inclusion.svg)
+
+*Figure 3 — Strong inclusion: every object of A is also an object of B.*
 
 **R4 — Weak relation.**
 Whatever the domain `A` of the rules governing a particular area, there exists an
@@ -230,6 +244,12 @@ constitute their intersection:
 The intersection of a domain with the reference set identifies the objects that
 belong to both, and therefore the area in which the assessment of the domain and
 the assessment of data protection and privacy coincide.
+
+![Three overlapping sets with their pairwise and triple intersections](../figures/fig-04-intersection.svg)
+
+*Figure 4 — Intersections among three domains. Where A is the personal data
+protection domain, the shaded regions identify the objects it shares with the
+others.*
 
 ---
 
@@ -280,6 +300,12 @@ representing the framework as a whole.
 The framework is to be read as a multi-dimensional distributed network, in which
 each node is a domain and each edge a relation between domains. Distinct planes
 of the representation are layers of a single system, not separate systems.
+
+![A distributed network of nodes connected by edges](../figures/fig-05-network.svg)
+
+*Figure 5 — The framework read as a distributed network. Each node is a domain,
+each edge a relation. The figure is itself a two-dimensional projection of a
+structure to be read across several planes.*
 
 The practical consequence is a rule of method. Where an assessment of a scenario
 appears to be complete on a single plane, it is to be treated as incomplete

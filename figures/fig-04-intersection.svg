@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 340" width="380" height="340" role="img" aria-label="Three overlapping sets A, B and C, with their pairwise and triple intersections labelled">
+  <style>
+    :root { color-scheme: light dark; }
+    .st { fill: #1f2937; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .lbl { font-size: 17px; font-weight: 700; }
+    .rg { font-size: 12px; font-weight: 600; }
+    .fml { font-size: 14px; }
+    .ca { fill: #a8cbe3; }
+    .cb { fill: #f2d675; }
+    .cc { fill: #b9cfa8; }
+    @media (prefers-color-scheme: dark) {
+      .st { fill: #e5e7eb; }
+      .ca { fill: #2f5573; }
+      .cb { fill: #7d6a24; }
+      .cc { fill: #465c3c; }
+    }
+  </style>
+
+  <g style="mix-blend-mode: multiply;">
+    <circle class="ca" cx="190" cy="115" r="92" opacity="0.75"/>
+    <circle class="cb" cx="240" cy="200" r="92" opacity="0.75"/>
+    <circle class="cc" cx="140" cy="200" r="92" opacity="0.75"/>
+  </g>
+
+  <text class="st lbl" x="182" y="70">A</text>
+  <text class="st lbl" x="278" y="215">B</text>
+  <text class="st lbl" x="88" y="215">C</text>
+
+  <text class="st rg" x="132" y="152">AC</text>
+  <text class="st rg" x="222" y="152">AB</text>
+  <text class="st rg" x="172" y="178">ABC</text>
+  <text class="st rg" x="176" y="234">BC</text>
+
+  <text class="st fml" x="72" y="322">A ∩ B ∩ C,  A ∩ C,  A ∩ B,  B ∩ C</text>
+</svg>

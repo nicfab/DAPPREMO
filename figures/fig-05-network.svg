@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="460" height="300" role="img" aria-label="A distributed network of nodes connected by edges, each node standing for a domain and each edge for a relation">
+  <style>
+    :root { color-scheme: light dark; }
+    .ed { stroke: #4a6fa5; stroke-width: 1.2; fill: none; }
+    .nd { fill: #2f5f9e; }
+    @media (prefers-color-scheme: dark) {
+      .ed { stroke: #7ba3d0; }
+      .nd { fill: #8fb6e0; }
+    }
+  </style>
+
+  <g class="ed">
+    <path d="M118 32 L172 30 M118 32 L92 74 M172 30 L196 72 M92 74 L146 68 M146 68 L196 72 M196 72 L252 66 M252 66 L300 74 M300 74 L352 62 M352 62 L406 96
+             M60 108 L92 74 M60 108 L110 104 M110 104 L146 68 M110 104 L150 110 M150 110 L196 72 M150 110 L200 106 M200 106 L252 66 M200 106 L246 112
+             M246 112 L300 74 M246 112 L292 108 M292 108 L352 62 M292 108 L340 114 M340 114 L406 96 M340 114 L380 128 M380 128 L406 96
+             M60 108 L74 148 M74 148 L112 142 M112 142 L110 104 M112 142 L150 110 M112 142 L156 152 M156 152 L200 106 M156 152 L204 148
+             M204 148 L246 112 M204 148 L248 156 M248 156 L292 108 M248 156 L286 150 M286 150 L340 114 M286 150 L332 158 M332 158 L380 128
+             M74 148 L48 186 M48 186 L96 182 M96 182 L74 148 M96 182 L112 142 M96 182 L140 190 M140 190 L156 152 M140 190 L188 184
+             M188 184 L204 148 M188 184 L232 192 M232 192 L248 156 M232 192 L280 186 M280 186 L286 150 M280 186 L326 194 M326 194 L332 158
+             M326 194 L368 186 M368 186 L332 158 M368 186 L380 128
+             M96 182 L120 222 M120 222 L140 190 M120 222 L168 218 M168 218 L188 184 M168 218 L212 228 M212 228 L232 192 M212 228 L258 220
+             M258 220 L280 186 M258 220 L300 230 M300 230 L326 194 M300 230 L344 222 M344 222 L368 186
+             M168 218 L186 258 M186 258 L212 228 M186 258 L232 262 M232 262 L258 220 M232 262 L212 228
+             M300 230 L288 268 M288 268 L332 262 M332 262 L344 222 M332 262 L300 230</path>
+  </g>
+
+  <g class="nd">
+    <circle cx="118" cy="32" r="6"/><circle cx="172" cy="30" r="6"/>
+    <circle cx="92" cy="74" r="6"/><circle cx="146" cy="68" r="6"/><circle cx="196" cy="72" r="6"/>
+    <circle cx="252" cy="66" r="6"/><circle cx="300" cy="74" r="6"/><circle cx="352" cy="62" r="6"/>
+    <circle cx="406" cy="96" r="6"/>
+    <circle cx="60" cy="108" r="6"/><circle cx="110" cy="104" r="6"/><circle cx="150" cy="110" r="6"/>
+    <circle cx="200" cy="106" r="6"/><circle cx="246" cy="112" r="6"/><circle cx="292" cy="108" r="6"/>
+    <circle cx="340" cy="114" r="6"/><circle cx="380" cy="128" r="6"/>
+    <circle cx="74" cy="148" r="6"/><circle cx="112" cy="142" r="6"/><circle cx="156" cy="152" r="6"/>
+    <circle cx="204" cy="148" r="6"/><circle cx="248" cy="156" r="6"/><circle cx="286" cy="150" r="6"/>
+    <circle cx="332" cy="158" r="6"/>
+    <circle cx="48" cy="186" r="6"/><circle cx="96" cy="182" r="6"/><circle cx="140" cy="190" r="6"/>
+    <circle cx="188" cy="184" r="6"/><circle cx="232" cy="192" r="6"/><circle cx="280" cy="186" r="6"/>
+    <circle cx="326" cy="194" r="6"/><circle cx="368" cy="186" r="6"/>
+    <circle cx="120" cy="222" r="6"/><circle cx="168" cy="218" r="6"/><circle cx="212" cy="228" r="6"/>
+    <circle cx="258" cy="220" r="6"/><circle cx="300" cy="230" r="6"/><circle cx="344" cy="222" r="6"/>
+    <circle cx="186" cy="258" r="6"/><circle cx="232" cy="262" r="6"/>
+    <circle cx="288" cy="268" r="6"/><circle cx="332" cy="262" r="6"/>
+  </g>
+</svg>

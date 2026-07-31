@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 300" width="380" height="300" role="img" aria-label="Set A entirely contained within set B, illustrating strong inclusion">
+  <style>
+    :root { color-scheme: light dark; }
+    .st { fill: #1f2937; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .lbl { font-size: 18px; font-weight: 700; }
+    .el { font-size: 13px; }
+    .fo { fill: none; stroke: #1f2937; stroke-width: 1.6; }
+    .fi { fill: #f2d675; stroke: #1f2937; stroke-width: 1.6; }
+    .fml { font-size: 15px; }
+    @media (prefers-color-scheme: dark) {
+      .st { fill: #e5e7eb; }
+      .fo { stroke: #e5e7eb; }
+      .fi { fill: #8a7423; stroke: #e5e7eb; }
+    }
+  </style>
+
+  <circle class="fo" cx="190" cy="140" r="118"/>
+  <circle class="fi" cx="190" cy="175" r="72"/>
+
+  <text class="st lbl" x="72" y="42">B</text>
+  <text class="st lbl" x="262" y="150">A</text>
+
+  <text class="st el" x="158" y="58">a, b, c, …</text>
+  <text class="st el" x="158" y="182">d, e, f, …</text>
+
+  <text class="st fml" x="158" y="288">A ⊂ B</text>
+</svg>
