@@ -1,0 +1,46 @@
+{
+  "upload_type": "publication",
+  "publication_type": "standard",
+  "title": "DAPPREMO — Data Protection and Privacy Relationships Model",
+  "description": "<p>DAPPREMO (Data Protection and Privacy Relationships Model) is a relational model for the personal data protection and privacy domains, based on set theory. Each area of activity is treated as a domain, that is, a set whose objects are its rules, activities and processes. The personal data protection domain is composed of legal rules together with non-homogeneous objects such as ethical principles, which belong to it by virtue of a shared characteristic property. The model describes the dynamic, multi-dimensional relations between such domains and between the individual objects they contain, and supports the identification of objects that are relevant to a case but habitually overlooked.</p><p>This repository hosts the canonical, versioned specification of the model, which restates it in normative form: numbered definitions, relation types, explicit assumptions, and a clear separation between normative and informative sections.</p><p>The model was created by Nicola Fabiano in 2020. Its most recent peer-reviewed version is the chapter published in the proceedings of the 11th Annual Privacy Forum (APF 2023).</p>",
+  "creators": [
+    {
+      "name": "Fabiano, Nicola",
+      "affiliation": "Studio Legale Fabiano, Rome, Italy",
+      "orcid": "0000-0002-8188-7656"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "DAPPREMO",
+    "data protection",
+    "privacy",
+    "GDPR",
+    "relational model",
+    "set theory",
+    "ethics"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1007/978-3-031-61089-9_8",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-section",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.48550/arXiv.2107.09113",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://codeberg.org/nicfab/DAPPREMO",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ],
+  "notes": "If you use or refer to DAPPREMO, please cite the publication indicated under \"preferred-citation\" in CITATION.cff. © 2026 Nicola Fabiano. Licensed under CC BY 4.0. DAPPREMO and the DAPPREMO logo are trade marks of Nicola Fabiano (European Union trade mark No 018706610) and are not covered by the licence; see NOTICE.md."
+}
