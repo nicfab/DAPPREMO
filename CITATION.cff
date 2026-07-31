@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+title: "DAPPREMO — Data Protection and Privacy Relationships Model"
+message: >-
+  If you use or refer to DAPPREMO, please cite the journal article indicated
+  under "preferred-citation".
+type: dataset
+authors:
+  - family-names: Fabiano
+    given-names: Nicola
+    affiliation: "Studio Legale Fabiano, Rome, Italy"
+abstract: >-
+  DAPPREMO (Data Protection and Privacy Relationships Model) is a relational
+  model for the personal data protection and privacy domains, based on set
+  theory. Each area of activity is treated as a domain, that is, a set whose
+  objects are its rules, activities and processes. The personal data protection
+  domain is composed of legal rules together with non-homogeneous objects such
+  as ethical principles, which belong to it by virtue of a shared characteristic
+  property. The model describes the dynamic, multi-dimensional relations between
+  such domains and between the individual objects they contain. This repository
+  hosts the canonical, versioned specification of the model.
+keywords:
+  - DAPPREMO
+  - data protection
+  - privacy
+  - GDPR
+  - relational model
+  - set theory
+  - ethics
+repository-code: "https://codeberg.org/nicfab/DAPPREMO"
+url: "https://www.dappremo.eu"
+license: CC-BY-4.0
+preferred-citation:
+  type: article
+  title: >-
+    The approach with the Data Protection and Privacy Relationships Model
+    (DAPPREMO)
+  authors:
+    - family-names: Fabiano
+      given-names: Nicola
+  journal: "Journal on Systemics, Cybernetics and Informatics"
+  volume: 19
+  issue: 7
+  start: 1
+  end: 19
+  year: 2021
+  issn: "1690-4524"
+  url: "https://www.iiisci.org/journal/sci/FullText.asp?var=&id=IP147LL21"
