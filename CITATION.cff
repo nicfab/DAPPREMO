@@ -16,11 +16,14 @@ abstract: >-
   objects are its rules, activities and processes. The personal data protection
   domain is composed of legal rules together with non-homogeneous objects such
   as ethical principles, which belong to it by virtue of a shared characteristic
-  property. The model describes the dynamic, multi-dimensional relations between
-  such domains and between the individual objects they contain, and supports the
-  identification of objects that are relevant to a case but habitually
-  overlooked. This repository hosts the canonical, versioned specification of
-  the model.
+  property. Relations are prior to the objects they relate: the qualification of
+  an object is determined by the relations in which it stands, and objects arise
+  from those relations that no domain contains. The model classifies objects by
+  their standing with respect to an assessment — identified, overlooked, unknown,
+  indeterminable, emergent — and holds that every assessment is truncated and
+  must state where it stopped. This repository hosts the canonical, versioned
+  specification of the model, including the requirements a conformant assessment
+  must satisfy.
 keywords:
   - DAPPREMO
   - data protection
@@ -29,11 +32,12 @@ keywords:
   - relational model
   - set theory
   - ethics
+  - accountability
 repository-code: "https://codeberg.org/nicfab/DAPPREMO"
 url: "https://www.dappremo.eu"
 license: CC-BY-4.0
-version: 1.0.0
-date-released: "2026-07-31"
+version: 1.1.0
+date-released: "2026-08-01"
 doi: "10.5281/zenodo.21723683"
 identifiers:
   - type: doi
@@ -42,6 +46,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.21723684"
     description: "DOI of version 1.0.0"
+  - type: doi
+    value: "10.5281/zenodo.21724349"
+    description: "DOI of version 1.0.1"
 preferred-citation:
   type: conference-paper
   title: >-

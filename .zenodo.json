@@ -2,7 +2,7 @@
   "upload_type": "publication",
   "publication_type": "standard",
   "title": "DAPPREMO — Data Protection and Privacy Relationships Model",
-  "description": "<p>DAPPREMO (Data Protection and Privacy Relationships Model) is a relational model for the personal data protection and privacy domains, based on set theory. Each area of activity is treated as a domain, that is, a set whose objects are its rules, activities and processes. The personal data protection domain is composed of legal rules together with non-homogeneous objects such as ethical principles, which belong to it by virtue of a shared characteristic property. The model describes the dynamic, multi-dimensional relations between such domains and between the individual objects they contain, and supports the identification of objects that are relevant to a case but habitually overlooked.</p><p>This repository hosts the canonical, versioned specification of the model, which restates it in normative form: numbered definitions, relation types, explicit assumptions, and a clear separation between normative and informative sections.</p><p>The model was created by Nicola Fabiano in 2020. Its most recent peer-reviewed version is the chapter published in the proceedings of the 11th Annual Privacy Forum (APF 2023).</p>",
+  "description": "<p>DAPPREMO (Data Protection and Privacy Relationships Model) is a relational model for the personal data protection and privacy domains, based on set theory. Each area of activity is treated as a domain, that is, a set whose objects are its rules, activities and processes. The personal data protection domain is composed of legal rules together with non-homogeneous objects such as ethical principles, which belong to it by virtue of a shared characteristic property.</p><p>Relations are prior to the objects they relate. The qualification of an object is determined by the relations in which it stands and holds relative to the relational context under which it was reached; what obtains between domains is not recoverable from an inspection of those domains taken separately; and what is visible in a scenario depends on the position from which it is observed. Objects arise from the relations that no domain contains and that cannot be reached by inspecting any domain.</p><p>The model classifies objects by their standing with respect to an assessment — identified, overlooked whether by decision or by inadvertence, unknown, indeterminable, or emergent — and treats the points at which relations meet as potentially infinite. It follows that no assessment is complete: every assessment stops, and what the model requires is that it state where it stopped and on what ground. An assessment that stops silently presents a partial analysis as a complete one, and it is against that defect that the model is directed.</p><p>This repository hosts the canonical, versioned specification of the model, which restates it in normative form: numbered definitions, relation types, assumptions, epistemic categories and generative properties, together with the requirements a conformant assessment must satisfy, and a clear separation between normative and informative sections.</p><p>The model was created by Nicola Fabiano in 2020. Its most recent peer-reviewed version is the chapter published in the proceedings of the 11th Annual Privacy Forum (APF 2023).</p>",
   "creators": [
     {
       "name": "Fabiano, Nicola",
@@ -20,7 +20,8 @@
     "GDPR",
     "relational model",
     "set theory",
-    "ethics"
+    "ethics",
+    "accountability"
   ],
   "related_identifiers": [
     {
