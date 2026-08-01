@@ -1,0 +1,169 @@
+@prefix dppr:    <https://dappremo.eu/ns/dappremo#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+################################################################
+# Epistemic extension
+#
+# This module adds the epistemic dimension of the model: the
+# relation between an object and the analysis that does or does
+# not reach it.
+#
+# The distinctions below are drawn from the 2024 book chapter,
+# which states that the model serves to identify objects that are
+# overlooked because ignored or not considered, whether
+# intentionally or unintentionally, and that a first analysis
+# surfaces unexplored points representing objects. All definitions
+# here are written afresh: the chapter is under exclusive licence
+# to the publisher and is citation only under PUBLICATIONS.md.
+################################################################
+
+dppr:EpistemicScheme
+    a                skos:ConceptScheme ;
+    dct:title        "DAPPREMO Epistemic Extension"@en ,
+                     "Estensione epistemica DAPPREMO"@it ;
+    dct:description  """Classification of objects by their standing with respect to an
+        analysis: whether the analysis has reached them, has passed over them, or could
+        not have reached them. The model's stated purpose is to bring the second and
+        third categories into view."""@en ;
+    dct:creator      "Nicola Fabiano" ;
+    dct:license      <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:source       <https://doi.org/10.1007/978-3-031-61089-9_8> ;
+    dct:issued       "2026-07-31"^^xsd:date ;
+    skos:hasTopConcept dppr:EpistemicStatus , dppr:EmergentObject .
+
+################################################################
+# Epistemic status
+################################################################
+
+dppr:EpistemicStatus
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:topConceptOf dppr:EpistemicScheme ;
+    skos:prefLabel   "epistemic status"@en , "stato epistemico"@it ;
+    skos:definition  """The standing of an object with respect to a given analysis:
+        whether the analysis has identified it, has passed over it, or was not in a
+        position to reach it."""@en ;
+    skos:scopeNote   """Epistemic status is a property of an object relative to an
+        analysis, not an intrinsic property of the object. The same object may be
+        identified in one assessment and overlooked in another."""@en ;
+    skos:narrower    dppr:Identified , dppr:Overlooked , dppr:Unknown ,
+                     dppr:Indeterminable .
+
+dppr:Identified
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:prefLabel   "identified object"@en , "oggetto identificato"@it ;
+    skos:definition  """An object that a given analysis has reached and taken into
+        account."""@en ;
+    skos:scopeNote   """The objects that a conventional compliance exercise reaches are
+        typically those most in view: the rules expressly applicable and the activities
+        formally declared."""@en ;
+    skos:broader     dppr:EpistemicStatus .
+
+dppr:Overlooked
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:prefLabel   "overlooked object"@en , "oggetto trascurato"@it ;
+    skos:definition  """An object relevant to the case which a given analysis could have
+        reached but did not take into account."""@en ;
+    skos:scopeNote   """This is the category on which the model bears most directly: the
+        object is available to the analysis, and is nonetheless left aside. Bringing it
+        into view is the stated purpose of the model."""@en ;
+    skos:broader     dppr:EpistemicStatus ;
+    skos:narrower    dppr:IntentionallyOverlooked , dppr:UnintentionallyOverlooked .
+
+dppr:IntentionallyOverlooked
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:prefLabel   "intentionally overlooked object"@en ,
+                     "oggetto trascurato intenzionalmente"@it ;
+    skos:definition  """An overlooked object which the analysis set aside by a decision,
+        whether stated or unstated."""@en ;
+    skos:scopeNote   """The distinction from the unintentional case matters in
+        accountability terms: a decision to exclude is a decision that may be reviewed
+        and for which reasons may be required."""@en ;
+    skos:broader     dppr:Overlooked .
+
+dppr:UnintentionallyOverlooked
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:prefLabel   "unintentionally overlooked object"@en ,
+                     "oggetto trascurato involontariamente"@it ;
+    skos:definition  """An overlooked object which the analysis failed to reach without
+        having decided to exclude it."""@en ;
+    skos:scopeNote   """Typically the product of a single-plane reading: the object lies
+        on a plane the analysis did not consider, and its absence is not noticed."""@en ;
+    skos:broader     dppr:Overlooked .
+
+dppr:Unknown
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:prefLabel   "unknown object"@en , "oggetto sconosciuto"@it ;
+    skos:definition  """An object relevant to the case which the analysis was not in a
+        position to reach, because its existence was not apparent."""@en ;
+    skos:scopeNote   """Distinguished from an overlooked object: what is overlooked was
+        available and was not taken up; what is unknown was not available. The model
+        addresses this category through the relations, which surface objects that direct
+        inspection of the domain does not."""@en ;
+    skos:broader     dppr:EpistemicStatus ;
+    skos:related     dppr:EmergentObject .
+
+dppr:Indeterminable
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:prefLabel   "indeterminable object"@en , "oggetto indeterminabile"@it ;
+    skos:definition  """An object whose presence is apparent but whose extent or content
+        cannot be settled within the analysis."""@en ;
+    skos:scopeNote   """Recorded because the model holds that the attributes of a domain
+        are in part precise and identified and in part indefinite: an assessment that
+        reports only what it could determine misrepresents its own completeness."""@en ;
+    skos:broader     dppr:EpistemicStatus .
+
+################################################################
+# Emergent objects
+################################################################
+
+dppr:EmergentObject
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:topConceptOf dppr:EpistemicScheme ;
+    skos:prefLabel   "emergent object"@en , "oggetto emergente"@it ;
+    skos:definition  """An object that is not posited in any domain but arises from the
+        relations between domains, and is identified by analysing those relations rather
+        than by inspecting the domains."""@en ;
+    skos:scopeNote   """The model treats points not previously explored as themselves
+        objects to be taken into account. An emergent object is not created by the
+        analysis: it is disclosed by it. This is the operation the model performs that
+        an inspection of each domain in isolation cannot."""@en ;
+    skos:example     """In a request made to a public administration, the applicant's
+        domain and the office's domain are each open to direct inspection; the object
+        constituted by their interaction is not, and is regularly left out of an
+        assessment addressed to either side alone."""@en ;
+    skos:narrower    dppr:IntersectionObject , dppr:UnexploredPoint .
+
+dppr:IntersectionObject
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:prefLabel   "intersection object"@en , "oggetto di intersezione"@it ;
+    skos:definition  """An emergent object constituted by the meeting of two or more
+        relations."""@en ;
+    skos:scopeNote   """Where relations are read as a distributed network, each point at
+        which they meet stands for something that must be accounted for. The object is
+        determined by the relations that meet there and by nothing else."""@en ;
+    skos:broader     dppr:EmergentObject ;
+    skos:related     dppr:Intersection .
+
+dppr:UnexploredPoint
+    a                skos:Concept ;
+    skos:inScheme    dppr:EpistemicScheme ;
+    skos:prefLabel   "unexplored point"@en , "punto inesplorato"@it ;
+    skos:definition  """A position within the network of relations that an analysis has
+        not examined, and which stands for an object not yet accounted for."""@en ;
+    skos:scopeNote   """An unexplored point is a determinate absence rather than a
+        general gap: it can be named, and named it can be examined. Recording the
+        unexplored points of an assessment states what that assessment does not
+        cover."""@en ;
+    skos:broader     dppr:EmergentObject ;
+    skos:related     dppr:Unknown .

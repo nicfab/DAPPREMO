@@ -29,6 +29,26 @@ R1–R5, A1–A8, E1–E5 and G1–G4. Renumbering the sections is not by itself
 MAJOR change, provided the identifiers retain their meaning: it is the
 identifiers, not the section numbers, that citations rely on.
 
+### The ontology versions separately
+
+The artefacts under `ontology/` carry their own version, recorded in
+`owl:versionInfo`, which does not track the version of this repository.
+
+The reason is that the two change at different rates and for different reasons.
+An axiom drawn wrongly, a label omitted, a constraint that fires where it should
+not — these are corrections to the formalisation and say nothing about DAPPREMO.
+Were they to raise the repository version, the specification would be reissued,
+and archived, to record a change it had not undergone.
+
+A change under `ontology/` therefore raises the version of this repository only
+where it follows a change to the model, in which case the specification changes
+too and the version reflects that. Otherwise it is a commit against `main`, and
+the ontology's own version records it.
+
+Where the ontology reaches a state worth archiving in its own right — a first
+complete formalisation, a set of constraints ready to be used — that is a MINOR
+release of this repository, recorded here as an addition.
+
 Two consequences follow. A new publication on DAPPREMO does not by itself
 require a new version: it does so only where it changes the substance of the
 model, in which case the specification is updated and the record in

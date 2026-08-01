@@ -1,0 +1,165 @@
+@prefix dppr:    <https://dappremo.eu/ns/dappremo#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+################################################################
+# Relational extension
+#
+# This module states the position that relations are ontologically
+# prior to the objects they relate: an object of the model is not
+# a thing that happens to stand in relations, but is constituted
+# and qualified by the relations in which it stands.
+#
+# The position is not imported from elsewhere. Section 6 of the
+# specification already states, normatively, that the observer's
+# position determines what is visible and that changing it brings
+# relations into view that were not observable before. This module
+# draws out what follows.
+################################################################
+
+dppr:RelationalScheme
+    a                skos:ConceptScheme ;
+    dct:title        "DAPPREMO Relational Extension"@en ,
+                     "Estensione relazionale DAPPREMO"@it ;
+    dct:description  """Concepts required to treat relations as primitive: the
+        relational context under which an object is qualified, the observational plane
+        on which relations are read, and the vantage point from which they are
+        observed."""@en ;
+    dct:creator      "Nicola Fabiano" ;
+    dct:license      <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:source       <https://doi.org/10.5281/zenodo.21723683> ;
+    dct:issued       "2026-07-31"^^xsd:date ;
+    skos:hasTopConcept dppr:RelationalContext , dppr:Qualification ,
+                       dppr:ObservationalPlane , dppr:VantagePoint .
+
+################################################################
+# Relational context and qualification
+################################################################
+
+dppr:RelationalContext
+    a                skos:Concept ;
+    skos:inScheme    dppr:RelationalScheme ;
+    skos:topConceptOf dppr:RelationalScheme ;
+    skos:prefLabel   "relational context"@en , "contesto relazionale"@it ;
+    skos:definition  """The set of relations taken into account together in a given
+        analysis."""@en ;
+    skos:scopeNote   """A relational context is not the totality of relations obtaining
+        in a scenario, which is unbounded, but the selection an analysis has made. The
+        selection is itself an analytical decision and is to be stated: what an
+        assessment concludes holds under the context it adopted, not absolutely."""@en ;
+    skos:related     dppr:Qualification , dppr:UnexploredPoint .
+
+dppr:Qualification
+    a                skos:Concept ;
+    skos:inScheme    dppr:RelationalScheme ;
+    skos:topConceptOf dppr:RelationalScheme ;
+    skos:prefLabel   "qualification"@en , "qualificazione"@it ;
+    skos:definition  """What an object or domain is taken to be, under a stated
+        relational context."""@en ;
+    skos:scopeNote   """Qualification is relative, not intrinsic. The same object may be
+        qualified differently under different relational contexts, and neither
+        qualification is a mistake: each holds under its own context. An assessment that
+        reports a qualification without reporting the context under which it was reached
+        states less than it appears to."""@en ;
+    skos:example     """A record held by an office may qualify as an administrative
+        item under the relational context of that office's procedures, and as personal
+        data under a context that includes the reference set. Both hold."""@en ;
+    skos:narrower    dppr:ContextDependentQualification ,
+                     dppr:ContextInvariantQualification .
+
+dppr:ContextDependentQualification
+    a                skos:Concept ;
+    skos:inScheme    dppr:RelationalScheme ;
+    skos:prefLabel   "context-dependent qualification"@en ,
+                     "qualificazione dipendente dal contesto"@it ;
+    skos:definition  """A qualification that holds under some relational contexts and
+        not under others."""@en ;
+    skos:scopeNote   """The ordinary case under this model. Recording a qualification as
+        context-dependent is a statement about the qualification, not a reservation
+        about it."""@en ;
+    skos:broader     dppr:Qualification .
+
+dppr:ContextInvariantQualification
+    a                skos:Concept ;
+    skos:inScheme    dppr:RelationalScheme ;
+    skos:prefLabel   "context-invariant qualification"@en ,
+                     "qualificazione invariante rispetto al contesto"@it ;
+    skos:definition  """A qualification that holds under every relational context in
+        which the object appears."""@en ;
+    skos:scopeNote   """Invariance is a strong claim and is to be asserted only where it
+        can be shown. The presence of the reference set in every assessment is asserted
+        by the model as invariant; few other qualifications are."""@en ;
+    skos:broader     dppr:Qualification ;
+    skos:related     dppr:ReferenceSet .
+
+################################################################
+# Constitution
+################################################################
+
+dppr:Constitution
+    a                skos:Concept ;
+    skos:inScheme    dppr:RelationalScheme ;
+    skos:prefLabel   "constitution by relation"@en , "costituzione per relazione"@it ;
+    skos:definition  """The standing of an emergent object with respect to the relations
+        from which it arises: the object is not antecedent to those relations but is
+        constituted by them."""@en ;
+    skos:scopeNote   """Constitution is to be distinguished from membership. An object
+        of a domain is a member of that domain and may be inspected within it. An
+        emergent object belongs to no domain and cannot be inspected within one: it is
+        reached only through the relations that constitute it. Where those relations are
+        not considered, the object is not merely missed, it is not available to be
+        missed."""@en ;
+    skos:related     dppr:EmergentObject .
+
+################################################################
+# Planes and vantage points
+################################################################
+
+dppr:ObservationalPlane
+    a                skos:Concept ;
+    skos:inScheme    dppr:RelationalScheme ;
+    skos:topConceptOf dppr:RelationalScheme ;
+    skos:prefLabel   "observational plane"@en , "piano di osservazione"@it ;
+    skos:definition  """One of the several planes across which the relations of a
+        scenario are to be read, understood as a layer of a single system rather than a
+        system of its own."""@en ;
+    skos:scopeNote   """The model holds that an assessment appearing complete on a
+        single plane is to be treated as incomplete until the relations obtaining on
+        other planes have been considered. A plane is therefore not a partition of the
+        scenario but a restriction of the reading."""@en ;
+    skos:related     dppr:RelationalContext .
+
+dppr:VantagePoint
+    a                skos:Concept ;
+    skos:inScheme    dppr:RelationalScheme ;
+    skos:topConceptOf dppr:RelationalScheme ;
+    skos:prefLabel   "vantage point"@en , "punto di osservazione"@it ;
+    skos:definition  """The position from which an analysis observes a scenario, which
+        determines which relations are visible to it."""@en ;
+    skos:scopeNote   """Stated in section 6 of the specification: the observer's
+        position determines what is visible, and widening the field of view brings into
+        view relations not previously observable. It follows that the vantage point of
+        an assessment is part of what the assessment reports, not a circumstance
+        external to it."""@en ;
+    skos:example     """A request made to a public administration observed from the
+        applicant's position and from the office's position yields two different sets of
+        visible relations; neither is the scenario."""@en ;
+    skos:related     dppr:ObservationalPlane , dppr:UnintentionallyOverlooked .
+
+################################################################
+# Non-reducibility
+################################################################
+
+dppr:NonReducibility
+    a                skos:Concept ;
+    skos:inScheme    dppr:RelationalScheme ;
+    skos:prefLabel   "non-reducibility of relations"@en ,
+                     "non riducibilita delle relazioni"@it ;
+    skos:definition  """The property whereby what obtains between domains is not
+        recoverable from an inspection of those domains taken separately."""@en ;
+    skos:scopeNote   """This is the ground of the model's practical claim. If relations
+        were recoverable from the domains, an analysis proceeding domain by domain would
+        suffice and nothing would be systematically overlooked. Because they are not,
+        the relations must be examined in their own right."""@en ;
+    skos:related     dppr:Constitution , dppr:EmergentObject .

@@ -1,0 +1,340 @@
+@prefix dppr:    <https://dappremo.eu/ns/dappremo#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+################################################################
+# Concept scheme
+################################################################
+
+dppr:TaxonomyScheme
+    a                skos:ConceptScheme ;
+    dct:title        "DAPPREMO Taxonomy"@en , "Tassonomia DAPPREMO"@it ;
+    dct:description  """Controlled vocabulary of the terms defined by the DAPPREMO
+        specification. The definitions are those stated in the normative sections 3
+        and 4 of the specification; the notation values (D1-D7, R1-R5) are the
+        identifiers used there. Concepts marked with a scope note as derived are not
+        separately numbered in the specification but are named within it."""@en ;
+    dct:creator      "Nicola Fabiano" ;
+    dct:license      <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:source       <https://doi.org/10.5281/zenodo.21723683> ;
+    dct:conformsTo   "DAPPREMO Specification 1.0.1" ;
+    dct:issued       "2026-07-31"^^xsd:date ;
+    skos:hasTopConcept
+        dppr:Domain ,
+        dppr:Object ,
+        dppr:CharacteristicProperty ,
+        dppr:Agent ,
+        dppr:Relation .
+
+################################################################
+# D1 - Domain, and the domains named by the specification
+################################################################
+
+dppr:Domain
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:topConceptOf dppr:TaxonomyScheme ;
+    skos:notation    "D1" ;
+    skos:prefLabel   "domain"@en , "dominio"@it ;
+    skos:definition  "A set representing a delimited area of activity."@en ;
+    skos:scopeNote   """Domains are denoted by S1, S2, S3, ... or, where convenient,
+        by A, B, C. A domain is fully described by its objects together with the
+        relations in which they stand."""@en ;
+    skos:example     """A sector of public administration; the core business of a
+        private undertaking; an Internet of Things ecosystem; a software development
+        project; the area of personal data protection and privacy itself."""@en ;
+    skos:narrower    dppr:ReferenceSet , dppr:PrivacyRules , dppr:EthicalPrinciples ,
+                     dppr:EngagedSubset .
+
+dppr:PrivacyRules
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:notation    "D4" ;
+    skos:prefLabel   "set of privacy rules"@en , "insieme delle regole sulla privacy"@it ;
+    skos:altLabel    "P"@en ;
+    skos:definition  """The set whose objects are the legal rules governing privacy and
+        the protection of natural persons with regard to the processing of personal
+        data, within a stated legal order."""@en ;
+    skos:scopeNote   """Where the legal order is that of the European Union, this set
+        includes in particular Regulation (EU) 2016/679."""@en ;
+    skos:broader     dppr:Domain ;
+    skos:related     dppr:EthicalPrinciples , dppr:ReferenceSet .
+
+dppr:EthicalPrinciples
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:notation    "D5" ;
+    skos:prefLabel   "set of ethical principles"@en , "insieme dei principi etici"@it ;
+    skos:altLabel    "E"@en ;
+    skos:definition  """The set whose objects are the ethical principles bearing on the
+        processing of personal data and on privacy."""@en ;
+    skos:scopeNote   """This set is not a subset of the set of privacy rules: its
+        objects are not stated in legal rules. It is nonetheless a set of objects
+        sharing the characteristic property of the personal data protection and privacy
+        domain."""@en ;
+    skos:broader     dppr:Domain ;
+    skos:related     dppr:PrivacyRules , dppr:ReferenceSet .
+
+dppr:ReferenceSet
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:notation    "D6" ;
+    skos:prefLabel   "reference set"@en , "insieme di riferimento"@it ;
+    skos:altLabel    "B"@en ;
+    skos:definition  """The union of the set of privacy rules and the set of ethical
+        principles: B = P u E. The domain against which other domains are assessed
+        under this model."""@en ;
+    skos:scopeNote   """The use of the reference set rather than the set of privacy
+        rules alone is a substantive choice: it makes explicit that the assessment of a
+        scenario cannot be reduced to the legal rules in force."""@en ;
+    skos:broader     dppr:Domain .
+
+dppr:EngagedSubset
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "engaged subset"@en , "sottoinsieme coinvolto"@it ;
+    skos:altLabel    "A-prime"@en ;
+    skos:definition  """The subset of the reference set to which a given domain is
+        related under a weak relation."""@en ;
+    skos:scopeNote   """Named A' in the specification under R4 but not separately
+        numbered. Its identification for a given domain is the central analytical
+        operation under the model: it determines which rules and principles are
+        actually engaged by the area under assessment."""@en ;
+    skos:broader     dppr:Domain ;
+    skos:related     dppr:WeakRelation .
+
+################################################################
+# D2 - Object, and the kinds of object named by the specification
+################################################################
+
+dppr:Object
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:topConceptOf dppr:TaxonomyScheme ;
+    skos:notation    "D2" ;
+    skos:prefLabel   "object"@en , "oggetto"@it ;
+    skos:definition  "An element of a domain."@en ;
+    skos:scopeNote   """Objects may be static or dynamic. Membership of a domain is
+        determined by the characteristic property, not by the formal source of the
+        object."""@en ;
+    skos:narrower    dppr:LegalRule , dppr:EthicalPrinciple , dppr:Activity ,
+                     dppr:Process .
+
+dppr:LegalRule
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "legal rule"@en , "norma giuridica"@it ;
+    skos:definition  "An object of a domain consisting in a rule of law."@en ;
+    skos:scopeNote   "Named in D2 as a kind of object; not separately numbered."@en ;
+    skos:broader     dppr:Object .
+
+dppr:EthicalPrinciple
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "ethical principle"@en , "principio etico"@it ;
+    skos:definition  "An object of a domain consisting in a principle of ethics."@en ;
+    skos:scopeNote   """Named in D2 as a kind of object; not separately numbered. An
+        ethical principle is not stated in any data protection law, yet it is an object
+        of the personal data protection domain, because it shares the characteristic
+        property of that domain with the legal rules."""@en ;
+    skos:broader     dppr:Object ;
+    skos:related     dppr:EthicalPrinciples .
+
+dppr:Activity
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "activity"@en , "attivita"@it ;
+    skos:definition  "An object of a domain consisting in something done."@en ;
+    skos:scopeNote   "Named in D2 as a kind of object; not separately numbered."@en ;
+    skos:broader     dppr:Object ;
+    skos:related     dppr:Process .
+
+dppr:Process
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "process"@en , "processo"@it ;
+    skos:definition  "An object of a domain constituted by activities."@en ;
+    skos:scopeNote   "Named in D2 as a kind of object; not separately numbered."@en ;
+    skos:broader     dppr:Object ;
+    skos:related     dppr:Activity .
+
+################################################################
+# D3 - Characteristic property
+################################################################
+
+dppr:CharacteristicProperty
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:topConceptOf dppr:TaxonomyScheme ;
+    skos:notation    "D3" ;
+    skos:prefLabel   "characteristic property"@en , "proprieta caratteristica"@it ;
+    skos:definition  """The property that unites all and only the objects of a given
+        domain."""@en ;
+    skos:scopeNote   """It follows that a domain may contain objects of heterogeneous
+        nature: membership is determined by the characteristic property, not by the
+        formal source of the object."""@en ;
+    skos:narrower    dppr:ApplicativeEffect .
+
+dppr:ApplicativeEffect
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "applicative effect"@en , "effetto applicativo"@it ;
+    skos:definition  """The characteristic property of the personal data protection and
+        privacy domain: the effect its objects produce when applied to a concrete
+        scenario."""@en ;
+    skos:broader     dppr:CharacteristicProperty .
+
+################################################################
+# D7 - Agent, and the agents named by the specification
+################################################################
+
+dppr:Agent
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:topConceptOf dppr:TaxonomyScheme ;
+    skos:notation    "D7" ;
+    skos:prefLabel   "agent"@en , "agente"@it ;
+    skos:definition  """A person or body acting within a domain and drawing consequences
+        from the relations in which that domain stands."""@en ;
+    skos:scopeNote   """Agents may be natural persons or organisations. Agents are not
+        objects of a domain; they act upon domains and their relations."""@en ;
+    skos:narrower    dppr:SupervisoryAuthority , dppr:Controller , dppr:Processor ,
+                     dppr:DataProtectionOfficer , dppr:Advisor , dppr:DataSubject .
+
+dppr:SupervisoryAuthority
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "supervisory authority"@en , "autorita di controllo"@it ;
+    skos:definition  "An agent exercising supervisory functions over data protection."@en ;
+    skos:scopeNote   "Named in D7 as a kind of agent; not separately numbered."@en ;
+    skos:broader     dppr:Agent .
+
+dppr:Controller
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "controller"@en , "titolare del trattamento"@it ;
+    skos:definition  "An agent determining the purposes and means of processing."@en ;
+    skos:scopeNote   "Named in D7 as a kind of agent; not separately numbered."@en ;
+    skos:broader     dppr:Agent .
+
+dppr:Processor
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "processor"@en , "responsabile del trattamento"@it ;
+    skos:definition  "An agent processing personal data on behalf of a controller."@en ;
+    skos:scopeNote   "Named in D7 as a kind of agent; not separately numbered."@en ;
+    skos:broader     dppr:Agent .
+
+dppr:DataProtectionOfficer
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "data protection officer"@en , "responsabile della protezione dei dati"@it ;
+    skos:altLabel    "DPO"@en ;
+    skos:definition  "An agent charged with advising on and monitoring compliance."@en ;
+    skos:scopeNote   "Named in D7 as a kind of agent; not separately numbered."@en ;
+    skos:broader     dppr:Agent .
+
+dppr:Advisor
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "advisor"@en , "consulente"@it ;
+    skos:definition  "An agent advising on data protection and privacy matters."@en ;
+    skos:scopeNote   "Named in D7 as a kind of agent; not separately numbered."@en ;
+    skos:broader     dppr:Agent .
+
+dppr:DataSubject
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "data subject"@en , "interessato"@it ;
+    skos:definition  "An agent whose personal data are processed."@en ;
+    skos:scopeNote   "Named in D7 as a kind of agent; not separately numbered."@en ;
+    skos:broader     dppr:Agent .
+
+################################################################
+# R1-R5 - Relation types
+################################################################
+
+dppr:Relation
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:topConceptOf dppr:TaxonomyScheme ;
+    skos:notation    "R1" ;
+    skos:prefLabel   "relation"@en , "relazione"@it ;
+    skos:definition  """Given two non-empty sets A and B, any subset of their Cartesian
+        product: R subset-of A x B."""@en ;
+    skos:scopeNote   """A relation need not involve every element of either set. An
+        element related to no element of the other set is unrelated under the relation;
+        such elements are admitted and are not a defect of the model. A single element
+        may be related to several elements of the other set."""@en ;
+    skos:narrower    dppr:Connection , dppr:StrongInclusion , dppr:WeakRelation ,
+                     dppr:Intersection .
+
+dppr:Connection
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:notation    "R2" ;
+    skos:prefLabel   "connection between domains"@en , "connessione tra domini"@it ;
+    skos:definition  """Two domains of a family are connected when some relation obtains
+        between them."""@en ;
+    skos:broader     dppr:Relation ;
+    skos:narrower    dppr:OneToOneConnection , dppr:OneToManyConnection .
+
+dppr:OneToOneConnection
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "one-to-one connection"@en , "connessione uno-a-uno"@it ;
+    skos:definition  "The configuration in which a domain is connected to a single domain."@en ;
+    skos:broader     dppr:Connection .
+
+dppr:OneToManyConnection
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:prefLabel   "one-to-many connection"@en , "connessione uno-a-molti"@it ;
+    skos:definition  "The configuration in which a domain is connected to several domains at once."@en ;
+    skos:broader     dppr:Connection .
+
+dppr:StrongInclusion
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:notation    "R3" ;
+    skos:prefLabel   "strong inclusion"@en , "inclusione forte"@it ;
+    skos:definition  """The relation obtaining where every object of a domain is also an
+        object of the reference set: A subset-of B."""@en ;
+    skos:scopeNote   """Strong inclusion asserts that all rules of the area described by
+        the domain are also privacy rules or ethical principles. This is a demanding
+        claim and will rarely hold. It is stated because it is the limiting case, not
+        because it is the expected one; where a scenario does not satisfy it, the weak
+        relation is to be used instead."""@en ;
+    skos:broader     dppr:Relation ;
+    skos:related     dppr:WeakRelation .
+
+dppr:WeakRelation
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:notation    "R4" ;
+    skos:prefLabel   "weak relation"@en , "relazione debole"@it ;
+    skos:definition  """Whatever the domain A of the rules governing a particular area,
+        there exists an appropriate subset A' of the reference set to which A is
+        related."""@en ;
+    skos:scopeNote   """The general case of the model, to be preferred to strong
+        inclusion in the assessment of concrete scenarios. The objects of the domain
+        need not themselves be data protection, privacy or ethical rules; they are
+        related to those rules, and the rules so related constitute the engaged
+        subset."""@en ;
+    skos:broader     dppr:Relation ;
+    skos:related     dppr:StrongInclusion , dppr:EngagedSubset .
+
+dppr:Intersection
+    a                skos:Concept ;
+    skos:inScheme    dppr:TaxonomyScheme ;
+    skos:notation    "R5" ;
+    skos:prefLabel   "intersection"@en , "intersezione"@it ;
+    skos:definition  """The relation obtaining where two or more domains share objects;
+        the shared objects constitute their intersection."""@en ;
+    skos:scopeNote   """The intersection of a domain with the reference set identifies
+        the objects that belong to both, and therefore the area in which the assessment
+        of the domain and the assessment of data protection and privacy coincide."""@en ;
+    skos:broader     dppr:Relation .

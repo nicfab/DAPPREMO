@@ -1,0 +1,157 @@
+@prefix dppr:    <https://dappremo.eu/ns/dappremo#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+################################################################
+# Generative extension
+#
+# This module treats the unboundedness of the model: the points at
+# which relations meet are potentially infinite, and the objects
+# they constitute cannot be enumerated.
+#
+# The consequence is not that the model is intractable. It is that
+# an assessment under this model is partial by structure rather
+# than by defect, and that what may be required of it is not
+# completeness but a stated account of where it stopped.
+#
+# Assumption A4 of the specification already states that the number
+# of domains admitted is potentially unbounded. This module states
+# what follows for the objects.
+################################################################
+
+dppr:GenerativeScheme
+    a                skos:ConceptScheme ;
+    dct:title        "DAPPREMO Generative Extension"@en ,
+                     "Estensione generativa DAPPREMO"@it ;
+    dct:description  """Concepts required to treat a structure whose objects are
+        generated rather than contained: intensional specification, the limit object,
+        and the declared truncation of an analysis."""@en ;
+    dct:creator      "Nicola Fabiano" ;
+    dct:license      <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:source       <https://doi.org/10.5281/zenodo.21723683> ;
+    dct:issued       "2026-07-31"^^xsd:date ;
+    skos:hasTopConcept dppr:GenerativeStructure , dppr:LimitObject , dppr:Truncation .
+
+################################################################
+# Generative structure
+################################################################
+
+dppr:GenerativeStructure
+    a                skos:Concept ;
+    skos:inScheme    dppr:GenerativeScheme ;
+    skos:topConceptOf dppr:GenerativeScheme ;
+    skos:prefLabel   "generative structure"@en , "struttura generativa"@it ;
+    skos:definition  """A structure that does not contain its objects but produces them:
+        the objects are determined by the relations, and their number is not fixed in
+        advance."""@en ;
+    skos:scopeNote   """The distinction from a container is not a nicety. A container
+        may in principle be inventoried; a generative structure may not, and an analysis
+        that proceeds as though it could will report a completeness it does not
+        have."""@en ;
+    skos:narrower    dppr:PotentialInfinity , dppr:IntensionalSpecification .
+
+dppr:PotentialInfinity
+    a                skos:Concept ;
+    skos:inScheme    dppr:GenerativeScheme ;
+    skos:prefLabel   "potential infinity"@en , "infinito potenziale"@it ;
+    skos:definition  """The condition of a collection whose members may always be
+        further generated, without any of them being given all at once."""@en ;
+    skos:scopeNote   """The points at which relations meet are potentially infinite in
+        this sense: given the relations obtaining in a scenario, further points may
+        always be determined, but no assessment holds them all. This is the sense in
+        which assumption A4 states that the number of domains is potentially
+        unbounded."""@en ;
+    skos:broader     dppr:GenerativeStructure ;
+    skos:related     dppr:Truncation .
+
+dppr:IntensionalSpecification
+    a                skos:Concept ;
+    skos:inScheme    dppr:GenerativeScheme ;
+    skos:prefLabel   "intensional specification"@en , "specificazione intensionale"@it ;
+    skos:definition  """The specification of a collection by the rule that determines
+        its members, rather than by listing them."""@en ;
+    skos:scopeNote   """The operative device of this model. Relations are finite and are
+        declared; the objects they constitute are specified by the rule that derives
+        them from those relations, and are obtained when required. An expression of the
+        model in a machine-readable form declares the relations and the derivation rule,
+        never the objects one by one."""@en ;
+    skos:broader     dppr:GenerativeStructure .
+
+################################################################
+# The limit object
+################################################################
+
+dppr:LimitObject
+    a                skos:Concept ;
+    skos:inScheme    dppr:GenerativeScheme ;
+    skos:topConceptOf dppr:GenerativeScheme ;
+    skos:prefLabel   "limit object"@en , "oggetto limite"@it ;
+    skos:definition  """An object determined by a family of relations as a whole, which
+        no individual relation of that family determines and which no domain
+        contains."""@en ;
+    skos:scopeNote   """A limit object stands to the relations that determine it as an
+        envelope stands to the family of lines tangent to it: it is not drawn, and it is
+        not one of the lines, yet it is fully determined by them and is the most
+        conspicuous thing present. Where the intersection object is reached by examining
+        two relations, the limit object is reached only by considering the family
+        entire; an analysis proceeding pairwise will not arrive at it."""@en ;
+    skos:related     dppr:EmergentObject , dppr:IntersectionObject .
+
+dppr:CardinalityShift
+    a                skos:Concept ;
+    skos:inScheme    dppr:GenerativeScheme ;
+    skos:prefLabel   "cardinality shift"@en , "salto di cardinalita"@it ;
+    skos:definition  """The passage from a collection of relations that may be
+        enumerated to a limit object that may not."""@en ;
+    skos:scopeNote   """Recorded to mark that the limit object differs from the
+        intersection objects in kind and not only in number: the points at which a
+        family of relations meet may be counted, the object those relations jointly
+        determine may not. An analysis that treats the second as merely a larger
+        quantity of the first will look for it in the wrong way."""@en ;
+    skos:related     dppr:LimitObject , dppr:PotentialInfinity .
+
+################################################################
+# Truncation
+################################################################
+
+dppr:Truncation
+    a                skos:Concept ;
+    skos:inScheme    dppr:GenerativeScheme ;
+    skos:topConceptOf dppr:GenerativeScheme ;
+    skos:prefLabel   "truncation"@en , "troncamento"@it ;
+    skos:definition  """The point at which an analysis stops generating objects, together
+        with the criterion by which it stopped."""@en ;
+    skos:scopeNote   """Because the objects are potentially infinite, every assessment
+        under this model is truncated. Truncation is therefore not a shortcoming to be
+        avoided but a fact to be stated: an assessment reports the relations it
+        considered, the objects it derived, and the ground on which it went no
+        further."""@en ;
+    skos:narrower    dppr:TruncationCriterion , dppr:UndeclaredTruncation .
+
+dppr:TruncationCriterion
+    a                skos:Concept ;
+    skos:inScheme    dppr:GenerativeScheme ;
+    skos:prefLabel   "truncation criterion"@en , "criterio di troncamento"@it ;
+    skos:definition  """The stated ground on which an analysis ceased to generate further
+        objects."""@en ;
+    skos:scopeNote   """Grounds may include the exhaustion of the relations selected,
+        the reaching of a stated plane of observation, or a judgment that further objects
+        would not bear on the case. The last is a judgment and is to be stated as such,
+        since it is the ground most liable to conceal an intentional
+        omission."""@en ;
+    skos:broader     dppr:Truncation ;
+    skos:related     dppr:IntentionallyOverlooked .
+
+dppr:UndeclaredTruncation
+    a                skos:Concept ;
+    skos:inScheme    dppr:GenerativeScheme ;
+    skos:prefLabel   "undeclared truncation"@en , "troncamento non dichiarato"@it ;
+    skos:definition  """A truncation that an assessment does not report, and which
+        therefore presents a partial analysis as a complete one."""@en ;
+    skos:scopeNote   """This is the defect the model is directed against. The error is
+        not that the analysis stopped, which it must, but that it stopped silently: what
+        was not reached cannot be questioned, and the assessment claims a completeness
+        that no assessment under this model can have."""@en ;
+    skos:broader     dppr:Truncation ;
+    skos:related     dppr:UnexploredPoint .
